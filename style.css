@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Paleta */
+    --bg-primary: #202020;
+    --bg-secondary: #353535;
+    --text-primary: #c5c5c5;
+    --text-secondary: #ffffff;
+    
+    /* Cores para cada aluno */
+    --daniel: #d32f2f;
+    --davi: #7b1fa2;
+    --gabriel: #388e3c;
+    --arthur: #1976d2;
+    --breno: #f57c00;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    padding: 20px;
+}
+
+header, footer {
+    background: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--text-secondary);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background: var(--bg-secondary);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--text-secondary);
+    
+    /* Animação de scroll */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+section p {
+    margin: 10px 0;
+    color: var(--text-secondary);
+}
+
+section.aluno {
+    margin-top: 40px;
+}
+
+/* Daniel */
+section.daniel {
+    border-left-color: var(--daniel);
+}
+section.daniel h2 {
+    color: var(--daniel);
+}
+
+/* Davi */
+section.davi {
+    border-left-color: var(--davi);
+}
+section.davi h2 {
+    color: var(--davi);
+}
+
+/* Gabriel */
+section.gabriel {
+    border-left-color: var(--gabriel);
+}
+section.gabriel h2 {
+    color: var(--gabriel);
+}
+
+/* Arthur */
+section.arthur {
+    border-left-color: var(--arthur);
+}
+
+section.arthur h2 {
+    color: var(--arthur);
+}
+
+/* Breno */
+section.breno {
+    border-left-color: var(--breno);
+}
+section.breno h2 {
+    color: var(--breno);
+}
+
+/* Estilo das bandeiras */
+.bandeira {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+ol, ul {
+    margin: 15px 0 15px 25px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+footer {
+    margin-top: 40px;
+    color: var(--text-secondary);
+}
